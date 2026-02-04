@@ -6,6 +6,10 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 
 // Import product images
+import newProduct1 from '../assets/new products 1.jpeg';
+import newProduct2 from '../assets/new products 2.jpeg';
+import newProduct3 from '../assets/new products 3.jpeg';
+import newProduct4 from '../assets/new products 4.jpeg';
 import product1 from '../assets/product1.jpeg';
 import product2 from '../assets/product2.jpeg';
 import product3 from '../assets/product3.jpeg';
@@ -20,6 +24,62 @@ import product10 from '../assets/product10.jpeg';
 const products = [
   {
     id: 1,
+    name: 'Latest Premium Hair System',
+    category: 'New Arrival',
+    image: newProduct1,
+    description: 'Our newest premium hair system featuring cutting-edge technology and superior craftsmanship.',
+    features: [
+      'Latest technology',
+      'Ultra-natural appearance',
+      'Premium materials',
+      'Maximum comfort',
+      'Long-lasting quality'
+    ]
+  },
+  {
+    id: 2,
+    name: 'Advanced Comfort System',
+    category: 'New Arrival',
+    image: newProduct2,
+    description: 'Experience unmatched comfort with our latest advanced hair replacement system.',
+    features: [
+      'Breathable design',
+      'Lightweight construction',
+      'Natural movement',
+      'Easy maintenance',
+      'Perfect fit'
+    ]
+  },
+  {
+    id: 3,
+    name: 'Luxury Hair Solution',
+    category: 'New Arrival',
+    image: newProduct3,
+    description: 'Premium luxury hair system designed for those who demand the very best.',
+    features: [
+      'Luxury grade materials',
+      'Flawless finish',
+      'Exclusive design',
+      'Superior durability',
+      'Professional quality'
+    ]
+  },
+  {
+    id: 4,
+    name: 'Elite Natural Look System',
+    category: 'New Arrival',
+    image: newProduct4,
+    description: 'Achieve the most natural look with our elite hair replacement technology.',
+    features: [
+      'Undetectable hairline',
+      'Natural density',
+      'Realistic scalp',
+      'Versatile styling',
+      'All-day confidence'
+    ]
+  },
+  {
+    id: 5,
     name: 'Premium Silk Base Hair Patch',
     category: 'Silk Base',
     image: product1,
@@ -172,7 +232,7 @@ function Product3DCard({ image, isActive }) {
   return (
     <mesh ref={meshRef} position={[0, 0, 0]}>
       <boxGeometry args={[2, 2.5, 0.1]} />
-      <meshStandardMaterial color="#D4AF37" metalness={0.5} roughness={0.2} />
+      <meshStandardMaterial color="#C9A55A" metalness={0.8} roughness={0.2} />
     </mesh>
   );
 }
@@ -224,14 +284,14 @@ const Products = () => {
     <section 
       id="products" 
       ref={ref}
-      className="relative py-20 md:py-32 bg-gradient-to-b from-black via-secondary-burgundy/10 to-black overflow-hidden"
+      className="relative py-20 md:py-32 bg-primary-light-blue overflow-hidden"
       onMouseEnter={() => setIsAutoPlay(false)}
       onMouseLeave={() => setIsAutoPlay(true)}
     >
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-gold rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-dark rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-navy rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -242,10 +302,10 @@ const Products = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-            <span className="text-gradient">Premium Products</span>
+            <span className="text-primary-navy">Premium <span className="text-gradient">Products</span></span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-gold to-secondary-lightGold mx-auto mb-8"></div>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-gold to-secondary-bright-gold mx-auto mb-8"></div>
+          <p className="text-lg md:text-xl text-primary-dark-text max-w-3xl mx-auto">
             Discover our exclusive collection of premium hair systems, each crafted with precision and care
           </p>
         </motion.div>
@@ -274,8 +334,8 @@ const Products = () => {
                 className="relative group"
                 style={{ transformStyle: 'preserve-3d' }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-gold/20 to-primary-dark/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
-                <div className="relative glass-morphism p-2 rounded-3xl overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-gold/20 to-primary-navy/10 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
+                <div className="relative bg-white p-2 rounded-3xl overflow-hidden shadow-xl border border-primary-light-gray group-hover:border-primary-gold transition-all duration-300">
                   <img
                     src={products[currentIndex].image}
                     alt={products[currentIndex].name}
@@ -308,10 +368,10 @@ const Products = () => {
                 className="space-y-6"
               >
                 <div>
-                  <h3 className="text-3xl md:text-5xl font-display font-bold mb-4 text-gradient">
+                  <h3 className="text-3xl md:text-5xl font-display font-bold mb-4 text-primary-navy">
                     {products[currentIndex].name}
                   </h3>
-                  <p className="text-gray-300 text-lg leading-relaxed">
+                  <p className="text-primary-dark-text text-lg leading-relaxed">
                     {products[currentIndex].description}
                   </p>
                 </div>
@@ -328,11 +388,11 @@ const Products = () => {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3 + index * 0.1 }}
-                        className="flex items-start gap-3 text-gray-300"
+                        className="flex items-start gap-3 text-primary-dark-text"
                       >
                         <div className="mt-1 flex-shrink-0">
-                          <div className="w-5 h-5 rounded-full bg-gradient-to-r from-primary-gold to-secondary-lightGold flex items-center justify-center">
-                            <FaCheck className="text-black text-xs" />
+                          <div className="w-5 h-5 rounded-full bg-gradient-to-r from-primary-gold to-secondary-bright-gold flex items-center justify-center">
+                            <FaCheck className="text-white text-xs" />
                           </div>
                         </div>
                         <span>{feature}</span>
@@ -341,13 +401,16 @@ const Products = () => {
                   </ul>
                 </div>
 
-                <motion.button
+                <motion.a
+                  href={`https://wa.me/8801847475102?text=Hi, I'm interested in the ${encodeURIComponent(products[currentIndex].name)}. Could you please provide more details?`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, y: -3 }}
                   whileTap={{ scale: 0.95 }}
-                  className="btn-3d px-8 py-4 bg-gradient-to-r from-primary-dark to-secondary-burgundy text-white rounded-full text-lg font-semibold shadow-2xl shadow-primary-gold/30 border-2 border-primary-gold"
+                  className="inline-block btn-3d px-8 py-4 bg-gradient-to-r from-primary-gold to-secondary-bright-gold text-white rounded-full text-lg font-semibold shadow-2xl shadow-primary-gold/30 hover:from-secondary-bright-gold hover:to-primary-gold"
                 >
                   Inquire Now
-                </motion.button>
+                </motion.a>
               </motion.div>
             </motion.div>
           </AnimatePresence>
@@ -357,7 +420,7 @@ const Products = () => {
             whileHover={{ scale: 1.1, x: -5 }}
             whileTap={{ scale: 0.9 }}
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 glass-morphism p-4 rounded-full hover:bg-white/20 transition-all duration-300 z-20"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 bg-primary-navy/90 backdrop-blur-sm p-4 rounded-full hover:bg-primary-navy transition-all duration-300 z-20 border border-primary-gold"
           >
             <FaChevronLeft className="text-2xl text-primary-gold" />
           </motion.button>
@@ -366,7 +429,7 @@ const Products = () => {
             whileHover={{ scale: 1.1, x: 5 }}
             whileTap={{ scale: 0.9 }}
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 glass-morphism p-4 rounded-full hover:bg-white/20 transition-all duration-300 z-20"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 bg-primary-navy/90 backdrop-blur-sm p-4 rounded-full hover:bg-primary-navy transition-all duration-300 z-20 border border-primary-gold"
           >
             <FaChevronRight className="text-2xl text-primary-gold" />
           </motion.button>
@@ -384,8 +447,8 @@ const Products = () => {
               }}
               className={`transition-all duration-300 rounded-full ${
                 index === currentIndex
-                  ? 'w-12 h-3 bg-gradient-to-r from-primary-gold to-secondary-lightGold'
-                  : 'w-3 h-3 bg-gray-600 hover:bg-gray-500'
+                  ? 'w-12 h-3 bg-gradient-to-r from-primary-gold to-secondary-bright-gold'
+                  : 'w-3 h-3 bg-primary-light-gray hover:bg-primary-gold/50'
               }`}
             />
           ))}

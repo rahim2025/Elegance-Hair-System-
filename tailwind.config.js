@@ -8,13 +8,19 @@ export default {
     extend: {
       colors: {
         primary: {
-          dark: '#8B0000',
-          gold: '#D4AF37',
-          light: '#FFFFFF',
+          navy: '#1B3A5C',
+          'deep-navy': '#0F2642',
+          'light-blue': '#E8F1F8',
+          gold: '#C9A55A',
+          'bright-gold': '#D4AF37',
+          white: '#FFFFFF',
+          'off-white': '#F5F7FA',
+          'light-gray': '#E5E7EB',
+          'dark-text': '#1F2937',
         },
         secondary: {
-          burgundy: '#6B0000',
-          lightGold: '#E5C158',
+          gold: '#C9A55A',
+          'bright-gold': '#D4AF37',
         }
       },
       fontFamily: {
@@ -32,8 +38,8 @@ export default {
           '50%': { transform: 'translateY(-20px)' },
         },
         glow: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(212, 175, 55, 0.5)' },
-          '50%': { boxShadow: '0 0 40px rgba(212, 175, 55, 0.8)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(201, 165, 90, 0.5)' },
+          '50%': { boxShadow: '0 0 40px rgba(201, 165, 90, 0.8)' },
         }
       },
       backgroundImage: {

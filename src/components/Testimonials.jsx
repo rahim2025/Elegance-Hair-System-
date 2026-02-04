@@ -98,11 +98,11 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="relative py-20 md:py-32 bg-gradient-to-b from-black via-primary-dark/10 to-black overflow-hidden">
+    <section id="testimonials" className="relative py-20 md:py-32 bg-white overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-gold/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary-burgundy/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary-navy/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -114,10 +114,10 @@ const Testimonials = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-            <span className="text-gradient">Client Testimonials</span>
+            <span className="text-primary-navy">Client <span className="text-gradient">Testimonials</span></span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-gold to-secondary-lightGold mx-auto mb-8"></div>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-gold to-secondary-bright-gold mx-auto mb-8"></div>
+          <p className="text-lg md:text-xl text-primary-dark-text max-w-3xl mx-auto">
             Hear from our satisfied customers around the world
           </p>
         </motion.div>
@@ -141,7 +141,7 @@ const Testimonials = () => {
               className="relative"
               style={{ transformStyle: 'preserve-3d' }}
             >
-              <div className="glass-morphism p-8 md:p-12 rounded-3xl border-2 border-primary-gold/30 relative">
+              <div className="bg-primary-light-blue/50 backdrop-blur-sm p-8 md:p-12 rounded-3xl border-2 border-primary-gold/30 relative shadow-xl">
                 {/* Quote Icon */}
                 <motion.div
                   animate={{ 
@@ -169,22 +169,22 @@ const Testimonials = () => {
                 </div>
 
                 {/* Testimonial Text */}
-                <p className="text-lg md:text-xl text-gray-200 text-center mb-8 leading-relaxed relative z-10 italic">
+                <p className="text-lg md:text-xl text-primary-dark-text text-center mb-8 leading-relaxed relative z-10 italic">
                   "{testimonials[currentIndex].text}"
                 </p>
 
                 {/* Author Info */}
                 <div className="text-center relative z-10">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary-gold to-secondary-lightGold flex items-center justify-center text-3xl font-bold text-white shadow-lg shadow-primary-gold/50">
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary-gold to-secondary-bright-gold flex items-center justify-center text-3xl font-bold text-white shadow-lg shadow-primary-gold/50">
                     {testimonials[currentIndex].name.charAt(0)}
                   </div>
-                  <h4 className="text-2xl font-display font-bold text-gradient mb-1">
+                  <h4 className="text-2xl font-display font-bold text-primary-navy mb-1">
                     {testimonials[currentIndex].name}
                   </h4>
                   <p className="text-primary-gold font-medium mb-1">
                     {testimonials[currentIndex].role}
                   </p>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-primary-dark-text text-sm">
                     📍 {testimonials[currentIndex].location}
                   </p>
                 </div>
@@ -201,7 +201,7 @@ const Testimonials = () => {
             whileHover={{ scale: 1.1, x: -5 }}
             whileTap={{ scale: 0.9 }}
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-16 glass-morphism p-4 rounded-full hover:bg-white/20 transition-all duration-300 z-20"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-16 bg-primary-navy/90 backdrop-blur-sm p-4 rounded-full hover:bg-primary-navy transition-all duration-300 z-20 border border-primary-gold"
           >
             <FaChevronLeft className="text-2xl text-primary-gold" />
           </motion.button>
@@ -210,7 +210,7 @@ const Testimonials = () => {
             whileHover={{ scale: 1.1, x: 5 }}
             whileTap={{ scale: 0.9 }}
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-16 glass-morphism p-4 rounded-full hover:bg-white/20 transition-all duration-300 z-20"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-16 bg-primary-navy/90 backdrop-blur-sm p-4 rounded-full hover:bg-primary-navy transition-all duration-300 z-20 border border-primary-gold"
           >
             <FaChevronRight className="text-2xl text-primary-gold" />
           </motion.button>
@@ -228,8 +228,8 @@ const Testimonials = () => {
               }}
               className={`transition-all duration-300 rounded-full ${
                 index === currentIndex
-                  ? 'w-12 h-3 bg-gradient-to-r from-primary-gold to-secondary-lightGold'
-                  : 'w-3 h-3 bg-gray-600 hover:bg-gray-500'
+                  ? 'w-12 h-3 bg-gradient-to-r from-primary-gold to-secondary-bright-gold'
+                  : 'w-3 h-3 bg-primary-light-gray hover:bg-primary-gold/50'
               }`}
             />
           ))}
@@ -244,17 +244,17 @@ const Testimonials = () => {
         >
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-gradient mb-1">10,000+</div>
-            <div className="text-gray-400">Happy Customers</div>
+            <div className="text-primary-dark-text">Happy Customers</div>
           </div>
           <div className="hidden md:block w-px h-12 bg-primary-gold/30"></div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-gradient mb-1">4.9/5</div>
-            <div className="text-gray-400">Average Rating</div>
+            <div className="text-primary-dark-text">Average Rating</div>
           </div>
           <div className="hidden md:block w-px h-12 bg-primary-gold/30"></div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-gradient mb-1">500+</div>
-            <div className="text-gray-400">5-Star Reviews</div>
+            <div className="text-primary-dark-text">5-Star Reviews</div>
           </div>
         </motion.div>
       </div>

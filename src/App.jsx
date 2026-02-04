@@ -18,7 +18,7 @@ function App() {
       <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />
       
       {!isLoading && (
-        <div className="min-h-screen bg-black text-white overflow-x-hidden">
+        <div className="min-h-screen bg-white text-primary-dark-text overflow-x-hidden">
           <Navigation />
           <main>
             <Hero />

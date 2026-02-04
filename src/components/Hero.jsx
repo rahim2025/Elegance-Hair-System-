@@ -19,7 +19,7 @@ function Stars(props) {
       <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
         <PointMaterial
           transparent
-          color="#D4AF37"
+          color="#C9A55A"
           size={0.002}
           sizeAttenuation={true}
           depthWrite={false}
@@ -43,11 +43,11 @@ function FloatingShapes() {
     <group ref={ref}>
       <mesh position={[2, 0, -2]}>
         <torusGeometry args={[0.5, 0.2, 16, 100]} />
-        <meshStandardMaterial color="#8B0000" wireframe />
+        <meshStandardMaterial color="#1B3A5C" wireframe />
       </mesh>
       <mesh position={[-2, 0, -2]}>
         <octahedronGeometry args={[0.5, 0]} />
-        <meshStandardMaterial color="#D4AF37" wireframe />
+        <meshStandardMaterial color="#C9A55A" wireframe />
       </mesh>
     </group>
   );
@@ -55,7 +55,7 @@ function FloatingShapes() {
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-primary-navy via-primary-deep-navy to-primary-navy">
       {/* 3D Background */}
       <div className="absolute inset-0 z-0">
         <Canvas camera={{ position: [0, 0, 1] }}>
@@ -67,7 +67,7 @@ const Hero = () => {
       </div>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-primary-navy/30 via-transparent to-primary-deep-navy/50 z-10"></div>
 
       {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -89,7 +89,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-4 font-light"
+            className="text-xl md:text-2xl lg:text-3xl text-primary-light-blue mb-4 font-light"
           >
             Redefine Your Confidence with
           </motion.p>
@@ -113,7 +113,7 @@ const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-3d px-10 py-4 bg-gradient-to-r from-primary-dark to-secondary-burgundy text-white rounded-full text-lg font-semibold shadow-2xl shadow-primary-gold/50 border-2 border-primary-gold"
+                className="btn-3d px-10 py-4 bg-gradient-to-r from-primary-gold to-secondary-bright-gold text-white rounded-full text-lg font-semibold shadow-2xl shadow-primary-gold/50 border border-primary-gold hover:from-secondary-bright-gold hover:to-primary-gold"
               >
                 Explore Products
               </motion.button>
@@ -123,7 +123,7 @@ const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-3d px-10 py-4 glass-morphism text-white rounded-full text-lg font-semibold shadow-2xl hover:bg-white/20"
+                className="btn-3d px-10 py-4 bg-transparent border-2 border-primary-gold text-white rounded-full text-lg font-semibold shadow-2xl hover:bg-primary-gold/10"
               >
                 Contact Us
               </motion.button>

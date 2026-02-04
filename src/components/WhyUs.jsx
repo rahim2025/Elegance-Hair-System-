@@ -33,13 +33,13 @@ const WhyUs = () => {
   ];
 
   return (
-    <section id="whyus" className="relative py-20 md:py-32 bg-black overflow-hidden">
+    <section id="whyus" className="relative py-20 md:py-32 bg-gradient-to-b from-primary-navy via-primary-deep-navy to-primary-navy overflow-hidden">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{
           backgroundImage: `
-            linear-gradient(rgba(212, 175, 55, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(212, 175, 55, 0.1) 1px, transparent 1px)
+            linear-gradient(rgba(201, 165, 90, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(201, 165, 90, 0.1) 1px, transparent 1px)
           `,
           backgroundSize: '100px 100px',
         }}></div>
@@ -54,10 +54,10 @@ const WhyUs = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-            <span className="text-gradient">Why Choose Elegance</span>
+            <span className="text-white">Why Choose <span className="text-gradient">Elegance</span></span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-gold to-secondary-lightGold mx-auto mb-8"></div>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-gold to-secondary-bright-gold mx-auto mb-8"></div>
+          <p className="text-lg md:text-xl text-primary-light-blue max-w-3xl mx-auto">
             We combine cutting-edge technology with traditional craftsmanship to deliver excellence
           </p>
         </motion.div>
@@ -80,20 +80,20 @@ const WhyUs = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-16 grid md:grid-cols-3 gap-6"
         >
-          <div className="text-center p-6 glass-morphism rounded-xl hover:scale-105 transition-transform duration-300">
+          <div className="text-center p-6 bg-white/95 backdrop-blur-sm rounded-xl hover:scale-105 transition-transform duration-300 border border-primary-light-gray hover:border-primary-gold shadow-lg">
             <div className="text-4xl mb-3">🔒</div>
             <h4 className="text-xl font-bold text-primary-gold mb-2">Secure Attachment</h4>
-            <p className="text-gray-300">Advanced adhesion technology for all-day confidence</p>
+            <p className="text-primary-dark-text">Advanced adhesion technology for all-day confidence</p>
           </div>
-          <div className="text-center p-6 glass-morphism rounded-xl hover:scale-105 transition-transform duration-300">
+          <div className="text-center p-6 bg-white/95 backdrop-blur-sm rounded-xl hover:scale-105 transition-transform duration-300 border border-primary-light-gray hover:border-primary-gold shadow-lg">
             <div className="text-4xl mb-3">💧</div>
             <h4 className="text-xl font-bold text-primary-gold mb-2">Water Resistant</h4>
-            <p className="text-gray-300">Swim, shower, and exercise without worry</p>
+            <p className="text-primary-dark-text">Swim, shower, and exercise without worry</p>
           </div>
-          <div className="text-center p-6 glass-morphism rounded-xl hover:scale-105 transition-transform duration-300">
+          <div className="text-center p-6 bg-white/95 backdrop-blur-sm rounded-xl hover:scale-105 transition-transform duration-300 border border-primary-light-gray hover:border-primary-gold shadow-lg">
             <div className="text-4xl mb-3">♻️</div>
             <h4 className="text-xl font-bold text-primary-gold mb-2">Long Lasting</h4>
-            <p className="text-gray-300">Durable construction for extended wear</p>
+            <p className="text-primary-dark-text">Durable construction for extended wear</p>
           </div>
         </motion.div>
       </div>
@@ -122,7 +122,7 @@ const FeatureCard = ({ feature, index, inView }) => {
       <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 rounded-2xl`}></div>
       
       {/* Card Content */}
-      <div className="relative glass-morphism p-8 rounded-2xl h-full border-2 border-transparent group-hover:border-primary-gold/50 transition-all duration-300">
+      <div className="relative bg-white/95 backdrop-blur-sm p-8 rounded-2xl h-full border-2 border-primary-light-gray group-hover:border-primary-gold/80 transition-all duration-300 shadow-lg">
         {/* Icon Container with 3D effect */}
         <motion.div
           animate={{ 
@@ -134,17 +134,17 @@ const FeatureCard = ({ feature, index, inView }) => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${feature.color} mb-6 shadow-lg`}
+          className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-gold to-secondary-bright-gold mb-6 shadow-lg"
           style={{ transformStyle: 'preserve-3d' }}
         >
           <Icon className="text-4xl text-white" style={{ transform: 'translateZ(20px)' }} />
         </motion.div>
 
-        <h3 className="text-2xl font-display font-bold mb-4 text-gradient group-hover:scale-105 transition-transform duration-300">
+        <h3 className="text-2xl font-display font-bold mb-4 text-primary-navy group-hover:scale-105 transition-transform duration-300">
           {feature.title}
         </h3>
         
-        <p className="text-gray-300 leading-relaxed">
+        <p className="text-primary-dark-text leading-relaxed">
           {feature.description}
         </p>
 

@@ -33,8 +33,8 @@ const Navigation = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'glass-morphism shadow-lg shadow-primary-gold/20' 
-          : 'bg-transparent'
+          ? 'bg-primary-navy/95 backdrop-blur-lg shadow-lg shadow-primary-gold/20' 
+          : 'bg-transparent backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,7 +82,7 @@ const Navigation = () => {
                   >
                     {item.name}
                   </motion.span>
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-gold to-secondary-lightGold group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-gold to-secondary-bright-gold group-hover:w-full transition-all duration-300"></span>
                 </Link>
               ))}
             </div>
@@ -105,7 +105,7 @@ const Navigation = () => {
         initial={false}
         animate={mobileMenuOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className="md:hidden overflow-hidden glass-morphism"
+        className="md:hidden overflow-hidden bg-primary-navy/95 backdrop-blur-lg"
       >
         <div className="px-4 pt-2 pb-6 space-y-3">
           {menuItems.map((item) => (
@@ -117,7 +117,7 @@ const Navigation = () => {
               offset={-80}
               duration={500}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-4 py-3 rounded-lg hover:bg-white/10 text-white hover:text-primary-gold transition-all duration-300 cursor-pointer font-medium"
+              className="block px-4 py-3 rounded-lg hover:bg-primary-gold/10 text-white hover:text-primary-gold transition-all duration-300 cursor-pointer font-medium"
             >
               {item.name}
             </Link>

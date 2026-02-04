@@ -14,11 +14,11 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="relative py-20 md:py-32 bg-gradient-to-b from-black via-primary-dark/10 to-black overflow-hidden">
+    <section id="about" className="relative py-20 md:py-32 bg-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, #C9A55A 1px, transparent 1px)',
           backgroundSize: '50px 50px'
         }}></div>
       </div>
@@ -34,8 +34,8 @@ const About = () => {
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
             <span className="text-gradient">About Elegance</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-gold to-secondary-lightGold mx-auto mb-8"></div>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-gold to-secondary-bright-gold mx-auto mb-8"></div>
+          <p className="text-lg md:text-xl text-primary-dark-text max-w-3xl mx-auto leading-relaxed">
             For over 15 years, <span className="text-primary-gold font-semibold">Elegance Hair System</span> has been at the forefront 
             of premium hair replacement solutions. We combine expert craftsmanship with cutting-edge technology 
             to create natural-looking, custom hair systems that restore confidence and transform lives.
@@ -56,28 +56,28 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="grid md:grid-cols-3 gap-8"
         >
-          <div className="glass-morphism p-8 rounded-2xl hover:scale-105 transition-transform duration-300">
+          <div className="bg-white border border-primary-light-gray p-8 rounded-2xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:border-primary-gold">
             <div className="text-primary-gold text-5xl mb-4">🎯</div>
-            <h3 className="text-2xl font-display font-bold mb-3 text-primary-gold">Our Mission</h3>
-            <p className="text-gray-300 leading-relaxed">
+            <h3 className="text-2xl font-display font-bold mb-3 text-primary-navy">Our Mission</h3>
+            <p className="text-primary-dark-text leading-relaxed">
               To provide premium, natural-looking hair solutions that empower individuals 
               to live confidently and authentically.
             </p>
           </div>
 
-          <div className="glass-morphism p-8 rounded-2xl hover:scale-105 transition-transform duration-300">
+          <div className="bg-white border border-primary-light-gray p-8 rounded-2xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:border-primary-gold">
             <div className="text-primary-gold text-5xl mb-4">💎</div>
-            <h3 className="text-2xl font-display font-bold mb-3 text-primary-gold">Our Vision</h3>
-            <p className="text-gray-300 leading-relaxed">
+            <h3 className="text-2xl font-display font-bold mb-3 text-primary-navy">Our Vision</h3>
+            <p className="text-primary-dark-text leading-relaxed">
               To be the global leader in innovative hair replacement systems, 
               setting new standards for quality and customer satisfaction.
             </p>
           </div>
 
-          <div className="glass-morphism p-8 rounded-2xl hover:scale-105 transition-transform duration-300">
+          <div className="bg-white border border-primary-light-gray p-8 rounded-2xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:border-primary-gold">
             <div className="text-primary-gold text-5xl mb-4">🌟</div>
-            <h3 className="text-2xl font-display font-bold mb-3 text-primary-gold">Our Promise</h3>
-            <p className="text-gray-300 leading-relaxed">
+            <h3 className="text-2xl font-display font-bold mb-3 text-primary-navy">Our Promise</h3>
+            <p className="text-primary-dark-text leading-relaxed">
               Uncompromising quality, personalized service, and solutions 
               that look and feel completely natural.
             </p>
@@ -118,19 +118,19 @@ const StatCard = ({ stat, inView }) => {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={inView ? { opacity: 1, scale: 1 } : {}}
       transition={{ duration: 0.5, delay: stat.delay }}
-      className="glass-morphism p-6 rounded-2xl text-center group hover:scale-105 transition-all duration-300"
+      className="bg-white border border-primary-light-gray p-6 rounded-2xl text-center group hover:scale-105 transition-all duration-300 hover:shadow-lg hover:border-primary-gold"
     >
       <motion.div
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 2, repeat: Infinity, delay: stat.delay }}
         className="inline-block"
       >
-        <Icon className="text-5xl text-primary-gold mb-4 group-hover:text-secondary-lightGold transition-colors duration-300" />
+        <Icon className="text-5xl text-primary-gold mb-4 group-hover:text-secondary-bright-gold transition-colors duration-300" />
       </motion.div>
       <div className="text-4xl md:text-5xl font-display font-bold text-gradient mb-2">
         {count.toLocaleString()}{stat.suffix}
       </div>
-      <div className="text-gray-300 font-medium">{stat.label}</div>
+      <div className="text-primary-dark-text font-medium">{stat.label}</div>
     </motion.div>
   );
 };

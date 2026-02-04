@@ -18,7 +18,7 @@ function LoadingShape() {
     <mesh ref={meshRef}>
       <torusGeometry args={[1, 0.4, 16, 100]} />
       <meshStandardMaterial 
-        color="#D4AF37" 
+        color="#C9A55A" 
         metalness={0.8} 
         roughness={0.2}
         wireframe
@@ -58,7 +58,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.1 }}
           transition={{ duration: 0.5 }}
-          className="fixed inset-0 z-[9999] bg-black flex items-center justify-center"
+          className="fixed inset-0 z-[9999] bg-gradient-to-b from-primary-navy via-primary-deep-navy to-primary-navy flex items-center justify-center"
         >
           {/* 3D Background */}
           <div className="absolute inset-0 opacity-30">
@@ -112,7 +112,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-xl text-gray-400 mb-12"
+              className="text-xl text-primary-light-blue mb-12"
             >
               Premium Hair Solutions
             </motion.p>
@@ -127,7 +127,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
                 {/* Progress Track */}
                 <div className="relative h-2 bg-white/10 rounded-full overflow-hidden mb-4">
                   <motion.div
-                    className="absolute top-0 left-0 h-full bg-gradient-to-r from-primary-gold to-secondary-lightGold rounded-full"
+                    className="absolute top-0 left-0 h-full bg-gradient-to-r from-primary-gold to-secondary-bright-gold rounded-full"
                     initial={{ width: '0%' }}
                     animate={{ width: `${progress}%` }}
                     transition={{ duration: 0.3 }}
@@ -163,7 +163,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
               transition={{ duration: 0.8, delay: 0.9 }}
               className="mt-8"
             >
-              <div className="flex items-center justify-center gap-2 text-gray-400">
+              <div className="flex items-center justify-center gap-2 text-primary-light-blue">
                 <span>Loading</span>
                 <motion.span
                   animate={{ opacity: [0, 1, 0] }}

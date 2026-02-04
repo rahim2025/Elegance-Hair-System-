@@ -22,21 +22,21 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: FaFacebook, link: '#', label: 'Facebook' },
+    { icon: FaFacebook, link: 'https://www.facebook.com/elegancehairbd', label: 'Facebook' },
     { icon: FaInstagram, link: '#', label: 'Instagram' },
     { icon: FaTwitter, link: '#', label: 'Twitter' },
     { icon: FaLinkedin, link: '#', label: 'LinkedIn' },
-    { icon: FaWhatsapp, link: '#', label: 'WhatsApp' },
+    { icon: FaWhatsapp, link: 'https://wa.me/8801847475102', label: 'WhatsApp' },
   ];
 
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-gradient-to-b from-black via-primary-dark/20 to-black border-t border-primary-gold/20">
+    <footer className="relative bg-primary-deep-navy border-t border-primary-gold/20">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, #C9A55A 1px, transparent 1px)',
           backgroundSize: '50px 50px'
         }}></div>
       </div>
@@ -141,19 +141,19 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-400">
                 <FaEnvelope className="text-primary-gold mt-1 flex-shrink-0" />
-                <a href="mailto:info@elegancehair.com" className="hover:text-primary-gold transition-colors duration-300">
-                  info@elegancehair.com
+                <a href="mailto:elegancehairbd@gmail.com" className="hover:text-primary-gold transition-colors duration-300">
+                  elegancehairbd@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-gray-400">
                 <FaPhone className="text-primary-gold mt-1 flex-shrink-0" />
-                <a href="tel:+15551234567" className="hover:text-primary-gold transition-colors duration-300">
-                  +1 (555) 123-4567
+                <a href="tel:+8801847475102" className="hover:text-primary-gold transition-colors duration-300">
+                  +880 1847475102
                 </a>
               </li>
               <li className="flex items-start gap-3 text-gray-400">
                 <FaMapMarkerAlt className="text-primary-gold mt-1 flex-shrink-0" />
-                <span>123 Elegance Street<br />Hair City, HC 12345</span>
+                <span>H-15/A, Road-4/B, Block-D, Dolipara, Uttara, Dhaka, Bangladesh, 1230</span>
               </li>
             </ul>
           </motion.div>
@@ -178,12 +178,12 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-6 py-3 bg-white/5 border-2 border-white/10 rounded-full text-white placeholder-gray-500 focus:outline-none focus:border-primary-gold transition-all duration-300"
+                className="flex-1 px-6 py-3 bg-white/10 border-2 border-primary-gold/30 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-primary-gold transition-all duration-300"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-primary-dark to-secondary-burgundy text-white rounded-full font-semibold border-2 border-primary-gold hover:shadow-lg hover:shadow-primary-gold/30 transition-all duration-300"
+                className="px-8 py-3 bg-gradient-to-r from-primary-gold to-secondary-bright-gold text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary-gold/30 transition-all duration-300"
               >
                 Subscribe
               </motion.button>
