@@ -6,6 +6,30 @@ import { FaStar, FaQuoteLeft, FaChevronLeft, FaChevronRight } from 'react-icons/
 const testimonials = [
   {
     id: 1,
+    name: 'Raheem Bhuiyan',
+    role: 'IT Specialist',
+    rating: 5,
+    text: 'Elegance Hair System এ আমি অনেক খুশি। এটি অত্যন্ত প্রাকৃতিক দেখায় এবং আরামদায়ক। ঢাকায় এত ভালো মানের হেয়ার সিস্টেম পাওয়া দুর্লভ। সবাইকে সুপারিশ করছি!',
+    location: 'Dhaka, Bangladesh',
+  },
+  {
+    id: 2,
+    name: 'Roudro',
+    role: 'Business Owner',
+    rating: 5,
+    text: 'Amazing experience! The quality is top-notch and the service is excellent. I was worried about finding the right hair system in Bangladesh, but Elegance exceeded my expectations. Highly professional!',
+    location: 'Chittagong, Bangladesh',
+  },
+  {
+    id: 3,
+    name: 'Pranto Rahman',
+    role: 'Student',
+    rating: 5,
+    text: 'Best decision I made! The hair system looks incredibly natural and nobody can tell the difference. The team at Elegance is very supportive and understanding. Great service in Dhaka!',
+    location: 'Dhaka, Bangladesh',
+  },
+  {
+    id: 4,
     name: 'Michael Chen',
     role: 'Business Executive',
     rating: 5,
@@ -13,7 +37,7 @@ const testimonials = [
     location: 'Singapore',
   },
   {
-    id: 2,
+    id: 5,
     name: 'David Williams',
     role: 'Entrepreneur',
     rating: 5,
@@ -21,7 +45,7 @@ const testimonials = [
     location: 'USA',
   },
   {
-    id: 3,
+    id: 6,
     name: 'Raj Patel',
     role: 'Software Engineer',
     rating: 5,
@@ -29,7 +53,7 @@ const testimonials = [
     location: 'India',
   },
   {
-    id: 4,
+    id: 7,
     name: 'James Anderson',
     role: 'Sales Manager',
     rating: 5,
@@ -37,7 +61,7 @@ const testimonials = [
     location: 'Australia',
   },
   {
-    id: 5,
+    id: 8,
     name: 'Ahmed Al-Rashid',
     role: 'Marketing Director',
     rating: 5,
@@ -45,7 +69,7 @@ const testimonials = [
     location: 'UAE',
   },
   {
-    id: 6,
+    id: 9,
     name: 'Robert Taylor',
     role: 'Consultant',
     rating: 5,

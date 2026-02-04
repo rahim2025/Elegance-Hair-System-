@@ -20,9 +20,23 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    alert('Thank you for your inquiry! We will get back to you soon.');
+    
+    // Create WhatsApp message with form details
+    const message = `Hello! I'd like to get in touch with you.
+    
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone}
+*Subject:* ${formData.subject}
+
+*Message:*
+${formData.message}`;
+
+    // Redirect to WhatsApp with the message
+    const whatsappUrl = `https://wa.me/8801847475102?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+    
+    // Reset form
     setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
   };
 
