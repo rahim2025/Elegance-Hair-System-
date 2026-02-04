@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-black text-white font-body antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .glass-morphism {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-gold via-secondary-lightGold to-primary-gold bg-clip-text text-transparent;
+  }
+
+  .btn-3d {
+    @apply relative overflow-hidden transition-all duration-300;
+    transform-style: preserve-3d;
+  }
+
+  .btn-3d:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.4);
+  }
+
+  .card-3d {
+    @apply transition-all duration-300;
+    transform-style: preserve-3d;
+  }
+
+  .card-3d:hover {
+    transform: rotateY(5deg) rotateX(5deg) scale(1.02);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8B0000, #D4AF37);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #D4AF37, #8B0000);
+}

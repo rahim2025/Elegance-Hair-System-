@@ -1,0 +1,8 @@
+/* App.css - Custom styles for Elegance Hair System */
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styles are in index.css */
