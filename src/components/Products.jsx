@@ -6,6 +6,12 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 
 // Import product images
+import puSkinBase from '../assets/Base design- Made with PU skin.jpg';
+import frenchLacePolySkin from '../assets/French Lace at front, poly skin in sides and back. Hair Type Human Hair. The single colored system pictured here is just for reference..jpg';
+import frenchLaceMonoSkin from '../assets/French Lace at the front,Mono net on top the top and Skin around the the bases.jpg';
+import frenchLacePUBack from '../assets/French lace on the top and front at the back PU skin.jpg';
+import fullNet from '../assets/made with full net.jpg';
+import frenchLaceBleachedKnots from '../assets/The hair unit is French Lace in front, bleached knots makes a natural hairline. Base Design French Lace front, mono center.jpg';
 import newProduct1 from '../assets/new products 1.jpeg';
 import newProduct2 from '../assets/new products 2.jpeg';
 import newProduct3 from '../assets/new products 3.jpeg';
@@ -22,6 +28,90 @@ import product9 from '../assets/product9.jpeg';
 import product10 from '../assets/product10.jpeg';
 
 const products = [
+  {
+    id: 101,
+    name: 'Full PU Skin Base System',
+    category: 'Skin Base',
+    image: puSkinBase,
+    description: 'Designed with a full PU (polyurethane) skin base for a seamless, natural-looking scalp appearance and strong adhesion.',
+    features: [
+      'Full PU skin base',
+      'Ultra-realistic scalp look',
+      'Strong & secure adhesion',
+      '100% human hair',
+      'Durable & long-lasting'
+    ]
+  },
+  {
+    id: 102,
+    name: 'French Lace & Poly Skin System',
+    category: 'Lace Front',
+    image: frenchLacePolySkin,
+    description: 'French lace at the front for a natural hairline combined with poly skin on the sides and back for maximum hold and comfort.',
+    features: [
+      'French lace front hairline',
+      'Poly skin sides & back',
+      '100% human hair',
+      'Undetectable front edge',
+      'Versatile styling'
+    ]
+  },
+  {
+    id: 103,
+    name: 'French Lace Mono Combo System',
+    category: 'Hybrid',
+    image: frenchLaceMonoSkin,
+    description: 'French lace at the front, mono net on top, and skin around the base — the ultimate combination of natural look, breathability, and secure fit.',
+    features: [
+      'French lace front',
+      'Mono net top for breathability',
+      'Skin base perimeter',
+      'Multi-directional styling',
+      'Premium comfort'
+    ]
+  },
+  {
+    id: 104,
+    name: 'French Lace with PU Skin Back',
+    category: 'Hybrid',
+    image: frenchLacePUBack,
+    description: 'French lace covering the top and front with PU skin at the back for the perfect balance of a natural hairline and easy attachment.',
+    features: [
+      'French lace top & front',
+      'PU skin at back',
+      'Easy attachment',
+      'Natural-looking hairline',
+      'Long-lasting wear'
+    ]
+  },
+  {
+    id: 105,
+    name: 'Full Net Hair System',
+    category: 'Full Net',
+    image: fullNet,
+    description: 'Crafted with a breathable full net base for maximum airflow, lightweight comfort, and all-day wear.',
+    features: [
+      'Full net/lace base',
+      'Maximum breathability',
+      'Ultra-lightweight',
+      'Natural hair movement',
+      'Ideal for hot climates'
+    ]
+  },
+  {
+    id: 106,
+    name: 'Bleached Knot French Lace System',
+    category: 'Lace Front',
+    image: frenchLaceBleachedKnots,
+    description: 'French lace in front with bleached knots for the most natural hairline possible. Features French lace front and mono center for exceptional aesthetics.',
+    features: [
+      'Bleached knots hairline',
+      'French lace front',
+      'Mono net center',
+      'Undetectable appearance',
+      '100% human hair'
+    ]
+  },
   {
     id: 1,
     name: 'Latest Premium Hair System',
